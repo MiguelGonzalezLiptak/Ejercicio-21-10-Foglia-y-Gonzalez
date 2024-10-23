@@ -67,6 +67,12 @@
 
 /* Un poco de cines */
 
+.fondoT{
+    display: flex;
+    justify-content: center;
+    text-decoration: underline;
+}
+
 .info1{
     margin-top: 60px;
 }
@@ -102,6 +108,191 @@
 .borde{
     border: 5px solid;
     margin: 30px;
+}
+
+/*Linea*/
+
+.linea{
+    background-color: gray;
+    border-radius: 5px;
+    height: 8px;
+    margin: 80px 100px 60px 100px
+}
+
+/* grilla1 */
+
+#grid-contenedor1{
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 0.2fr 1fr;
+    grid-template-areas: 
+    'titulo imagen'
+    'parrafo imagen';
+    grid-column-gap: 30px;
+    grid-row-gap: 10px;
+}   
+
+.titulo1{
+    grid-area: titulo;
+    justify-self: end;
+    font-size: 37px;
+    margin-top: 10px;
+}
+
+.imagen1{
+    grid-area: imagen;
+}
+
+.parrafo1{
+    grid-area: parrafo;
+    font-size: 25px;
+    justify-self: end;
+    text-align: end;
+    margin-left: 100px;
+}
+
+.imagen1 img{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+}
+
+.imagen1 img:hover{
+    transform: scale(1.1, 1.1);
+    transition: 1s;
+}
+
+/* grid 2 */
+
+#grid-contenedor2{
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 0.5fr 1fr;
+    grid-template-rows: 0.1fr 1fr;
+    grid-template-areas: 
+    'imagen2 titulo2'
+    'imagen2 parrafo2';
+}
+
+.imagen2{
+    grid-area: imagen2;
+    display: flex;
+    justify-content: center;
+}
+
+.titulo2{
+    grid-area: titulo2;
+    font-size: 37px;
+    justify-self: start;
+}
+
+.parrafo2{
+    grid-area: parrafo2;
+    font-size: 25px;
+}
+
+.parrafo2 p{
+    margin-right: 80px; 
+}
+
+.imagen2 img{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%  ;
+}
+
+.imagen2 img:hover{
+    transform: scale(1.1, 1.1);
+    transition: 1s;
+}
+
+/* grilla 3 */
+
+#grid-contenedor3{
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 0.2fr 1fr;
+    grid-template-areas: 
+    'titulo3 imagen3'
+    'parrafo3 imagen3';
+    grid-column-gap: 25px;
+    grid-row-gap: 25px;
+}   
+
+.titulo3{
+    grid-area: titulo3;
+    font-size: 37px;
+    justify-self: end;
+}
+
+.imagen3{
+    grid-area: imagen3;
+}
+
+.parrafo3{
+    grid-area: parrafo3;
+    font-size: 25px;
+    justify-self: end;
+    text-align: end;
+}
+
+.parrafo3 p{
+    margin-left: 60px;
+}
+
+.imagen3 img{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+}
+
+.imagen3 img:hover{
+    transform: scale(1.1, 1.1);
+    transition: 1s;
+}
+
+/* grilla4 */
+
+#grid-contenedor4{
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 0.5fr 1fr;
+    grid-template-rows: 0.2fr 1fr;
+    grid-template-areas: 
+    'imagen4 titulo4'
+    'imagen4 parrafo4';
+    grid-column-gap: 25px;
+    margin-bottom: 90px;
+}
+
+.imagen4{
+    grid-area: imagen4;
+    justify-self: end;
+}
+
+.imagen4 img{
+    width: 330px;
+    height: 330px;
+    border-radius: 50%;
+}
+
+.imagen4 img:hover{
+    transform: scale(1.1, 1.1);
+    transition: 1s;
+}
+
+.titulo4{
+    grid-area: titulo4;
+    font-size: 37px;
+    margin-top: 10px;
+}
+
+.parrafo4{
+    grid-area: parrafo4;
+    font-size: 25px;
+    margin-right: 80px; 
 }
 
 /*Footer */
@@ -149,6 +340,11 @@
     margin: 0px 20px 10px 20px;
 }
 
+.gradientfot{
+    height: 30px;
+    background: linear-gradient(white,#d61f1f );
+}
+
 /* Responsive */
 
 @media screen and (max-width: 400px){
@@ -182,5 +378,143 @@
         height: 50px;
         width: 50px;
         margin: 5px;
+    }
+
+    #grid-contenedor4{
+        margin-top: 20px;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.14fr 1fr 1fr;
+        grid-template-areas: 
+        'titulo4'
+        'parrafo4'
+        'imagen4';
+        grid-column-gap: 0px;
+        margin-bottom: 0px;
+    }
+
+    .imagen4{
+        justify-self: center;
+    }
+
+    .titulo4{
+        display: flex;
+        justify-content: center;
+    }
+    .parrafo4{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        margin-right: 0px;
+        margin: 0px 30px 0px 30px;
+    }
+
+    
+    #grid-contenedor3{
+        margin-top: 20px;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.14fr 1fr 1fr;
+        grid-template-areas: 
+        'titulo3'
+        'parrafo3'
+        'imagen3';
+        grid-column-gap: 0px;
+
+    }
+
+    .imagen3{
+        display: flex;
+        justify-content: center;
+    }
+
+    .titulo3{
+        display: flex;
+        justify-content: center;
+    }
+    .parrafo3{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        margin-right: 0px;
+        margin: 0px 30px 0px 30px;
+    }
+
+    .parrafo3 p{
+        margin-left: 0px;
+    }
+    .titulo3{
+        justify-self: center;
+    }
+
+    #grid-contenedor2{
+        margin-top: 20px;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.14fr 1fr 1fr;
+        grid-template-areas: 
+        'titulo2'
+        'parrafo2'
+        'imagen2';
+        grid-column-gap: 0px;
+
+    }
+
+    .imagen2{
+        display: flex;
+        justify-content: center;
+    }
+
+    .titulo2{
+        display: flex;
+        justify-content: center;
+    }
+
+    .parrafo2{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        justify-self: center;
+        margin-right: 0px;
+        margin: 0px 30px 0px 30px;
+    }
+    
+    .parrafo2 p{
+        margin-right: 0px;
+    }
+
+    .titulo2{
+        justify-self: center;
+    }
+
+    #grid-contenedor1{
+        margin-top: 20px;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.14fr 1fr 1fr;
+        grid-template-areas: 
+        'titulo'
+        'parrafo'
+        'imagen';
+        grid-column-gap: 0px;
+
+    }
+
+    .imagen1{
+        display: flex;
+        justify-content: center;
+    }
+
+    .titulo1{
+        display: flex;
+        justify-content: center;
+    }
+    .parrafo1{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        margin-right: 0px;
+        justify-self: center;
+        margin-left: 0px;
+        margin: 0px 30px 0px 30px
+    }
+    .titulo1{
+        justify-self: center;
     }
 }
